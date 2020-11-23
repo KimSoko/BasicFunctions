@@ -1,7 +1,7 @@
 function randomNum(min, max) {
   // returns integers only; to return floats remove the Math.floor() portion
-  return Math.floor(Math.random() * (max - min) + 1);
+  return Math.floor(Math.random() * (max - min) + min);
 }
 
 console.log(randomNum(1, 6));
-// the max here should +1 the actual max you want to return; as in this will return numbers 1, 2, 3, 4, 5, but NOT 6
+
