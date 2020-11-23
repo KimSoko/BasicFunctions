@@ -4,3 +4,4 @@ function randomNum(min, max) {
 }
 
 console.log(randomNum(1, 6));
+// the max here should +1 the actual max you want to return; as in this will return numbers 1, 2, 3, 4, 5, but NOT 6
