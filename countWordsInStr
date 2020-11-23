@@ -1,0 +1,17 @@
+function countWords(stringOfWords) {
+  // returns an empty object if string is empty
+  if (stringOfWords === '') {
+    return {};
+  }
+  var words = stringOfWords.split(' ');
+  var count = {};
+  for (var i = 0; i < words.length; i++) {
+    if (count[words[i]] === undefined) {
+      count[words[i]] = 1;
+    } else {
+      count[words[i]]++;
+    }
+  }
+  // otherwise returns an object where each key is a word in the string and it's value is the number of times it appears in the string
+  return count;
+}
