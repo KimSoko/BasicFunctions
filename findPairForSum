@@ -1,0 +1,32 @@
+// INSTRUCTIONS: Given a list of non-negative integers and a target sum, find a pair of numbers that sums to the target sum. [from HackReactor's TAA practice problems]
+
+// MAIN FUNCTION
+function findPairForSum(integers, target) {
+  var pair = [];
+  for (var i = 0; i < integers.length; i++)
+  for (var j = 1; j < integers.length; j++) {
+    if (integers[i] + integers[j] === target) {
+      pair.push(integers[i]);
+      pair.push(integers[j]);
+      return pair;
+      }
+  }
+  return pair;
+}
+
+// ASSERT FUNCTION
+function assertEqualArrays(actual, expected, testName) {
+  var actual = JSON.stringify(actual);
+  var expected = JSON.stringify(expected);
+  if (actual === expected) {
+    console.log('passed');
+  } else {
+    console.log('FAILED: Expected "' + expected + '", but got "' + actual +'"');
+  }
+}
+
+// TEST CASE
+var actual = findPairForSum([3, 34, 12, 5, 2], 15);
+var expected = [3, 12];
+assertEqualArrays(actual, expected, 'find a pair that equals the target');
+
