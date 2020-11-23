@@ -1,0 +1,6 @@
+function randomNum(min, max) {
+  // returns integers only; to return floats remove the Math.floor() portion
+  return Math.floor(Math.random() * (max - min) + 1);
+}
+
+console.log(randomNum(1, 6));
