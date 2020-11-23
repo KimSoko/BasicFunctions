@@ -4,4 +4,5 @@ function randomNum(min, max) {
 }
 
 console.log(randomNum(1, 6));
+// because I used Math.floor(), you have to set the max at 1 + (the actual max you want to see), because otherwise it will always round down and never get there. In this instance, 6 will never appear
 
